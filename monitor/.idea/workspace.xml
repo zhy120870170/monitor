@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="870defed-3692-427f-b81f-5a6a6d4dc30f" name="默认的" comment="" />
+    <ignored path="monitor.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/monitor$tests.coverage" NAME="tests Coverage Results" MODIFIED="1547546386619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitors/web" />
+    <SUITE FILE_PATH="coverage/monitor$minitor_debug.coverage" NAME="minitor_debug Coverage Results" MODIFIED="1548055866615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitors" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="monitor" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2450">
+                  <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#24#59#0" expanded="true" />
+                    <element signature="e#512#1199#0" expanded="false" />
+                    <element signature="e#1230#1587#0" expanded="false" />
+                    <element signature="e#1614#2280#0" expanded="false" />
+                    <element signature="e#2311#2577#0" expanded="false" />
+                    <element signature="e#2921#3952#0" expanded="false" />
+                    <element signature="e#3991#4070#0" expanded="false" />
+                    <element signature="e#4108#5448#0" expanded="false" />
+                    <element signature="e#5488#6250#0" expanded="false" />
+                    <element signature="e#6281#6974#0" expanded="false" />
+                    <element signature="e#7014#7497#0" expanded="false" />
+                    <element signature="e#7580#7800#0" expanded="false" />
+                    <element signature="e#7887#8105#0" expanded="false" />
+                    <element signature="e#9323#9398#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/templates/login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1500">
+                  <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/manage.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="275">
+                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#46#55#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/templates/header.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1425">
+                  <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+                  <folding>
+                    <element signature="n#aside#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="analyzer.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/templates/analyzer.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4750">
+                  <caret line="529" column="5" selection-start-line="529" selection-start-column="5" selection-end-line="529" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#8967#9265#0" expanded="false" />
+                    <element signature="e#9294#9761#0" expanded="false" />
+                    <element signature="e#9819#11092#0" expanded="false" />
+                    <element signature="e#11134#12095#0" expanded="false" />
+                    <element signature="e#12148#13708#0" expanded="false" />
+                    <element signature="e#13749#15078#0" expanded="false" />
+                    <element signature="e#13885#15060#0" expanded="false" />
+                    <element signature="e#15128#17990#0" expanded="false" />
+                    <element signature="e#18052#27443#0" expanded="false" />
+                    <element signature="e#19426#20805#0" expanded="false" />
+                    <element signature="e#20835#22021#0" expanded="false" />
+                    <element signature="e#22051#23443#0" expanded="false" />
+                    <element signature="e#23473#24771#0" expanded="false" />
+                    <element signature="e#24801#25987#0" expanded="false" />
+                    <element signature="e#26017#27409#0" expanded="false" />
+                    <element signature="e#28466#28693#0" expanded="false" />
+                    <element signature="e#28725#28914#0" expanded="false" />
+                    <element signature="e#28953#32006#0" expanded="false" />
+                    <element signature="e#29261#31903#0" expanded="false" />
+                    <element signature="e#32053#33613#0" expanded="false" />
+                    <marker date="1548042943178" expanded="true" signature="12697:12716" ph="..." />
+                    <marker date="1548042943178" expanded="false" signature="12717:12782" ph="..." />
+                    <marker date="1548042943178" expanded="false" signature="12717:13145" ph="..." />
+                    <marker date="1548042943178" expanded="false" signature="12891:12971" ph="..." />
+                    <marker date="1548042943178" expanded="false" signature="12891:13105" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="14223:14242" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="14243:14650" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="14389:14610" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15177:15844" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15237:15534" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15360:15490" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15594:15844" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15714:15844" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="15783:15844" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="16137:16209" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="16137:16246" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="16334:16441" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="16788:16989" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="17276:17385" ph="..." />
+                    <marker date="1548042943178" expanded="false" signature="18258:19369" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="18407:19341" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="18454:19309" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="18514:19057" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19113:19273" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19571:20778" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19633:19647" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19832:20750" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19879:20718" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="19939:20468" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="20524:20682" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="20980:21994" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="21042:21056" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="21242:21966" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="21289:21934" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="21349:21683" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="21739:21898" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="22196:23416" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="22258:22272" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="22456:23388" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="22503:23356" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="22563:23106" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23162:23320" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23618:24744" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23680:23694" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23880:24716" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23927:24684" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="23987:24433" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="24489:24648" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="24946:25960" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="25008:25022" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="25206:25932" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="25253:25900" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="25313:25650" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="25706:25864" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="26162:27382" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="26224:26238" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="26422:27354" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="26469:27322" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="26529:27072" ph="..." />
+                    <marker date="1548042943178" expanded="true" signature="27128:27286" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="taskedit.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/monitors/templates/taskedit.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="686">
+                  <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+                  <folding>
+                    <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="18" column="11" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#24#52#0" expanded="true" />
+                    <element signature="e#1247#1755#0" expanded="false" />
+                    <element signature="e#1796#2703#0" expanded="false" />
+                    <element signature="e#2744#3566#0" expanded="false" />
+                    <element signature="e#3609#5044#0" expanded="false" />
+                    <element signature="e#5088#5719#0" expanded="false" />
+                    <element signature="e#5766#6340#0" expanded="false" />
+                    <element signature="e#6394#7275#0" expanded="false" />
+                    <element signature="e#7334#8160#0" expanded="false" />
+                    <element signature="e#8218#9025#0" expanded="false" />
+                    <element signature="e#9089#9770#0" expanded="false" />
+                    <element signature="e#9811#10359#0" expanded="false" />
+                    <element signature="e#10399#11338#0" expanded="false" />
+                    <element signature="e#11378#12244#0" expanded="false" />
+                    <element signature="e#12292#13120#0" expanded="false" />
+                    <element signature="e#13162#13710#0" expanded="false" />
+                    <element signature="e#13758#14636#0" expanded="false" />
+                    <element signature="e#14677#15616#0" expanded="false" />
+                    <element signature="e#15665#16489#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="task_enums.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/tools/task_enums.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="175">
+                  <caret line="7" column="12" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="senti_python.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/senti_python.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4825">
+                  <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#24#36#0" expanded="true" />
+                    <element signature="e#5028#5601#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="monitorManage.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/monitors/web/tools/monitorManage.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#24#57#0" expanded="true" />
+                    <element signature="e#439#2707#0" expanded="false" />
+                    <element signature="e#3822#5065#0" expanded="false" />
+                    <element signature="e#5158#13995#0" expanded="false" />
+                    <element signature="e#6523#7777#0" expanded="false" />
+                    <element signature="e#7813#8937#0" expanded="false" />
+                    <element signature="e#8973#10239#0" expanded="false" />
+                    <element signature="e#10275#11506#0" expanded="false" />
+                    <element signature="e#11542#12628#0" expanded="false" />
+                    <element signature="e#12664#13930#0" expanded="false" />
+                    <element signature="e#14072#20974#0" expanded="false" />
+                    <element signature="e#21059#27087#0" expanded="false" />
+                    <element signature="e#27170#32293#0" expanded="false" />
+                    <element signature="e#32365#33127#0" expanded="false" />
+                    <element signature="e#33208#41128#0" expanded="false" />
+                    <element signature="e#41158#41231#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="否定词.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/否定词.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="50">
+                  <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/monitors/monitors/urls.py" />
+        <option value="$PROJECT_DIR$/monitors/web/utils/pagetools.py" />
+        <option value="$PROJECT_DIR$/monitors/templates/create.html" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/task_enums.py" />
+        <option value="$PROJECT_DIR$/monitors/web/templatetags/mytags.py" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/spiderurlstr.py" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/createTask.py" />
+        <option value="$PROJECT_DIR$/monitors/templates/analyzer2.html" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/pagetools.py" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/datetools.py" />
+        <option value="$PROJECT_DIR$/monitors/web/models.py" />
+        <option value="$PROJECT_DIR$/monitors/web/admin.py" />
+        <option value="$PROJECT_DIR$/monitors/web/mymiddleware.py" />
+        <option value="$PROJECT_DIR$/monitors/monitors/settings.py" />
+        <option value="$PROJECT_DIR$/monitors/templates/login.html" />
+        <option value="$PROJECT_DIR$/monitors/web/tests.py" />
+        <option value="$PROJECT_DIR$/monitors/web/analyzer/datas/stopwords.txt" />
+        <option value="$PROJECT_DIR$/monitors/static/js/common/analyzer.js" />
+        <option value="$PROJECT_DIR$/monitors/templates/tasklist.html" />
+        <option value="$PROJECT_DIR$/monitors/templates/header.html" />
+        <option value="$PROJECT_DIR$/monitors/manage.py" />
+        <option value="$PROJECT_DIR$/monitors/web/settings.py" />
+        <option value="$PROJECT_DIR$/monitors/web/analyzer/senti_python.py" />
+        <option value="$PROJECT_DIR$/monitors/web/urls.py" />
+        <option value="$PROJECT_DIR$/monitors/templates/analyzer.html" />
+        <option value="$PROJECT_DIR$/monitors/web/views.py" />
+        <option value="$PROJECT_DIR$/monitors/web/tools/monitorManage.py" />
+        <option value="$PROJECT_DIR$/monitors/templates/taskedit.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="添加" />
+    <OptionsSetting value="true" id="移除" />
+    <OptionsSetting value="true" id="签出" />
+    <OptionsSetting value="true" id="更新" />
+    <OptionsSetting value="true" id="状态" />
+    <OptionsSetting value="true" id="编辑" />
+    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="0" id="移除" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yuqing/tuniu" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code_space\python\monitor\monitors\static\js\common" />
+      <recent name="E:\code_space\python\monitor\monitors\static\images" />
+      <recent name="E:\code_space\python\monitor\monitors\web\analyzer" />
+      <recent name="E:\code_space\python\monitor\monitors\templates" />
+      <recent name="E:\code_space\python\monitor\monitors\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code_space\python\monitor\monitors\web\analyzer\datas" />
+      <recent name="E:\code_space\python\monitor\monitors\static\css" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.minitor_debug">
+    <configuration default="false" name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monitors/web" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monitors/web/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="monitor" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="minitor_debug" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\coding\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monitors" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="monitor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monitors/manage.py" />
+      <option name="PARAMETERS" value="runserver 0.0.0.0:9966" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.minitor_debug" />
+      <item index="1" class="java.lang.String" itemvalue="Python.tests" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="870defed-3692-427f-b81f-5a6a6d4dc30f" name="默认的" comment="" />
+      <created>1546488282676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546488282676</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1652452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38419914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31310943" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3365801" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39285713" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/tests.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/tools/monitorManage.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/tests.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/tests.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/views.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/monitors/web/tools/monitorManage.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="73" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/monitors/monitors/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/monitors/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/db/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1118">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3148">
+          <caret line="384" column="6" selection-start-line="384" selection-start-column="6" selection-end-line="384" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/monitors/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/static/css/alt/AdminLTE-select2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/static/js/adminlte.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/static/css/common/page.style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/SocketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="654" column="0" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/template/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="673" column="0" selection-start-line="673" selection-start-column="0" selection-end-line="673" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/templatetags/mytags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/monitors/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/analyze3r.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="371" column="86" selection-start-line="371" selection-start-column="86" selection-end-line="371" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tools/spiderurlstr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tools/pagetools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tools/datetools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/monitors/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/contrib/sessions/backends/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="237" column="8" selection-start-line="237" selection-start-column="8" selection-end-line="239" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="226" column="63" selection-start-line="226" selection-start-column="63" selection-end-line="226" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/程度级别词语.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1409">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/negative.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/positive.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/positive.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9750">
+          <caret line="390" column="5" selection-start-line="390" selection-start-column="5" selection-end-line="390" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="43" selection-start-line="18" selection-start-column="0" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/static/js/common/analyzer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/stopwords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4100">
+          <caret line="164" column="2" selection-start-line="164" selection-start-column="2" selection-end-line="164" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/static/js/common/analyzer_bak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/tasklist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tools/task_enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+          <folding>
+            <element signature="n#aside#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/mymiddleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#52#0" expanded="true" />
+            <element signature="e#1247#1755#0" expanded="false" />
+            <element signature="e#1796#2703#0" expanded="false" />
+            <element signature="e#2744#3566#0" expanded="false" />
+            <element signature="e#3609#5044#0" expanded="false" />
+            <element signature="e#5088#5719#0" expanded="false" />
+            <element signature="e#5766#6340#0" expanded="false" />
+            <element signature="e#6394#7275#0" expanded="false" />
+            <element signature="e#7334#8160#0" expanded="false" />
+            <element signature="e#8218#9025#0" expanded="false" />
+            <element signature="e#9089#9770#0" expanded="false" />
+            <element signature="e#9811#10359#0" expanded="false" />
+            <element signature="e#10399#11338#0" expanded="false" />
+            <element signature="e#11378#12244#0" expanded="false" />
+            <element signature="e#12292#13120#0" expanded="false" />
+            <element signature="e#13162#13710#0" expanded="false" />
+            <element signature="e#13758#14636#0" expanded="false" />
+            <element signature="e#14677#15616#0" expanded="false" />
+            <element signature="e#15665#16489#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/coding/python/Lib/site-packages/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/舆情生产代码/monitor/monitors/web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/senti_python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4825">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#36#0" expanded="true" />
+            <element signature="e#5028#5601#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2450">
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#59#0" expanded="true" />
+            <element signature="e#512#1199#0" expanded="false" />
+            <element signature="e#1230#1587#0" expanded="false" />
+            <element signature="e#1614#2280#0" expanded="false" />
+            <element signature="e#2311#2577#0" expanded="false" />
+            <element signature="e#2921#3952#0" expanded="false" />
+            <element signature="e#3991#4070#0" expanded="false" />
+            <element signature="e#4108#5448#0" expanded="false" />
+            <element signature="e#5488#6250#0" expanded="false" />
+            <element signature="e#6281#6974#0" expanded="false" />
+            <element signature="e#7014#7497#0" expanded="false" />
+            <element signature="e#7580#7800#0" expanded="false" />
+            <element signature="e#7887#8105#0" expanded="false" />
+            <element signature="e#9323#9398#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/analyzer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4750">
+          <caret line="529" column="5" selection-start-line="529" selection-start-column="5" selection-end-line="529" selection-end-column="5" />
+          <folding>
+            <element signature="e#8967#9265#0" expanded="false" />
+            <element signature="e#9294#9761#0" expanded="false" />
+            <element signature="e#9819#11092#0" expanded="false" />
+            <element signature="e#11134#12095#0" expanded="false" />
+            <element signature="e#12148#13708#0" expanded="false" />
+            <element signature="e#13749#15078#0" expanded="false" />
+            <element signature="e#13885#15060#0" expanded="false" />
+            <element signature="e#15128#17990#0" expanded="false" />
+            <element signature="e#18052#27443#0" expanded="false" />
+            <element signature="e#19426#20805#0" expanded="false" />
+            <element signature="e#20835#22021#0" expanded="false" />
+            <element signature="e#22051#23443#0" expanded="false" />
+            <element signature="e#23473#24771#0" expanded="false" />
+            <element signature="e#24801#25987#0" expanded="false" />
+            <element signature="e#26017#27409#0" expanded="false" />
+            <element signature="e#28466#28693#0" expanded="false" />
+            <element signature="e#28725#28914#0" expanded="false" />
+            <element signature="e#28953#32006#0" expanded="false" />
+            <element signature="e#29261#31903#0" expanded="false" />
+            <element signature="e#32053#33613#0" expanded="false" />
+            <marker date="1548042943178" expanded="true" signature="12697:12716" ph="..." />
+            <marker date="1548042943178" expanded="false" signature="12717:12782" ph="..." />
+            <marker date="1548042943178" expanded="false" signature="12717:13145" ph="..." />
+            <marker date="1548042943178" expanded="false" signature="12891:12971" ph="..." />
+            <marker date="1548042943178" expanded="false" signature="12891:13105" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="14223:14242" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="14243:14650" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="14389:14610" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15177:15844" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15237:15534" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15360:15490" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15594:15844" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15714:15844" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="15783:15844" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="16137:16209" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="16137:16246" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="16334:16441" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="16788:16989" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="17276:17385" ph="..." />
+            <marker date="1548042943178" expanded="false" signature="18258:19369" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="18407:19341" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="18454:19309" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="18514:19057" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19113:19273" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19571:20778" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19633:19647" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19832:20750" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19879:20718" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="19939:20468" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="20524:20682" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="20980:21994" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="21042:21056" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="21242:21966" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="21289:21934" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="21349:21683" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="21739:21898" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="22196:23416" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="22258:22272" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="22456:23388" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="22503:23356" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="22563:23106" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23162:23320" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23618:24744" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23680:23694" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23880:24716" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23927:24684" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="23987:24433" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="24489:24648" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="24946:25960" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="25008:25022" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="25206:25932" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="25253:25900" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="25313:25650" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="25706:25864" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="26162:27382" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="26224:26238" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="26422:27354" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="26469:27322" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="26529:27072" ph="..." />
+            <marker date="1548042943178" expanded="true" signature="27128:27286" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/analyzer/datas/否定词.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/web/tools/monitorManage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#57#0" expanded="true" />
+            <element signature="e#439#2707#0" expanded="false" />
+            <element signature="e#3822#5065#0" expanded="false" />
+            <element signature="e#5158#13995#0" expanded="false" />
+            <element signature="e#6523#7777#0" expanded="false" />
+            <element signature="e#7813#8937#0" expanded="false" />
+            <element signature="e#8973#10239#0" expanded="false" />
+            <element signature="e#10275#11506#0" expanded="false" />
+            <element signature="e#11542#12628#0" expanded="false" />
+            <element signature="e#12664#13930#0" expanded="false" />
+            <element signature="e#14072#20974#0" expanded="false" />
+            <element signature="e#21059#27087#0" expanded="false" />
+            <element signature="e#27170#32293#0" expanded="false" />
+            <element signature="e#32365#33127#0" expanded="false" />
+            <element signature="e#33208#41128#0" expanded="false" />
+            <element signature="e#41158#41231#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitors/templates/taskedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

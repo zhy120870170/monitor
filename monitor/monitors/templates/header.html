@@ -1,0 +1,102 @@
+<header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini">DT</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">DT舆情监控系统</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            {{ request.session.username }}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li>
+                                <a href="#" onclick="logout()">
+                                    <form action="" method="post" id="login_out_form">
+                                        {% csrf_token %}
+                                    </form>
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i> 退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <!-- Optionally, you can add icons to the links -->
+            <li class="treeview active menu-open">
+                <a href="#"><i class="fa fa-tasks" aria-hidden="true"></i> <span>舆情任务管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="/tasklist">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                            <span>任务列表</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>舆情统计分析</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="/analyzer">
+                                <i class="fa fa-align-left" aria-hidden="true"></i>
+                                <span>舆情分析</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<script type="text/javascript">
+    function logout(){
+        var data = $("#login_out_form").serialize();
+        $.ajax({
+            type: 'post',
+            url: '/login_out',
+            data: data,
+            success: function (data) {
+                var data_json = JSON.parse(data)
+                if (data_json['success']) {
+                    window.location.assign("/tasklist")
+                } else {
+                    alert("失败")
+                }
+            }
+        });
+    }
+</script>

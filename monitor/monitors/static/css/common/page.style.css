@@ -1,0 +1,53 @@
+.white-content {
+  background: #fff;
+}
+
+.page-filter-form-container {
+  max-width: 600px;
+}
+
+.border-right {
+  border-right: 1px solid #f4f4f4;
+}
+
+.chart-box .chart-box-title {
+  padding: 10px 0;
+  font-size: 120%;
+  text-indent: 1.5em;
+  color: #666;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.chart-box .chart-content {
+  height: 400px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+/* 列表块 */
+.items-list-block {}
+
+.items-list-block .item-ceil {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.items-list-block .item-ceil .item-ceil-info {
+  padding-bottom: 20px;
+}
+
+.items-list-block .item-ceil .item-ceil-options {
+  overflow: hidden;
+}
