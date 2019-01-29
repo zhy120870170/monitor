@@ -1,21 +1,21 @@
 
 $(function () {
     initDatetimeRangePicker();
+
     // 初始化渲染日期选择控件
     function initDatetimeRangePicker() {
         var $rangeKey = $('#datetime_range_key')
         var $subInput = $('#datetime_range')
         var $dateTextContainer = $('#datetime_range_key span')
-
         var startDate = moment($rangeKey.data('start-date'), 'YYYY-MM-DD')
         var endDate = moment($rangeKey.data('end-date'), 'YYYY-MM-DD')
 
         function cb(start, end) {
             var _range
             if (end.dayOfYear() === start.dayOfYear()) {
-                _range = start.format('YYYYMMDD')
+                _range = start.format('YYYY/MM/DD')
             } else {
-                _range = start.format('YYYYMMDD') + ' - ' + end.format('YYYYMMDD')
+                _range = start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD')
             }
             $dateTextContainer.html(_range)
             return $subInput.val(_range)
@@ -25,19 +25,18 @@ $(function () {
             opens: 'right',
             startDate: startDate,
             endDate: endDate,
-            minDate: moment().subtract(1, 'year'),
-            maxDate: moment().add(1, 'year'),
-            showDropdowns: true,
+            showDropdowns: false,
             showWeekNumbers: false,
             timePicker: false,
             autoUpdateInput: true,
-            maxSpan: moment.duration(31, 'days'),
             ranges: {
                 '今天': [moment(), moment()],
                 '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
                 '前天': [moment().subtract('days', 2), moment().subtract('days', 2)],
                 '最近7天': [moment().subtract('days', 6), moment().subtract('days')],
-                '最近30天': [moment().subtract('days', 29), moment().subtract('days')]
+                '最近30天': [moment().subtract('days', 29), moment().subtract('days')],
+                '最近3个月': [moment().subtract('days', 90), moment().subtract('days')],
+                '最近6个月': [moment().subtract('days', 180), moment().subtract('days')],
             },
             buttonClasses: ['btn'],
             applyClass: 'green',

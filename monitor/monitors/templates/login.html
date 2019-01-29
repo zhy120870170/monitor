@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-
-<html lang="zh-Hans" >
+<html>
 <head>
-<title>登录 | Django 站点管理员</title>
-<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/admin/css/login.css" />
-<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+    <meta charset="utf-8">
+    <title>舆情监控系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="User Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
+    <link href="static/css/page/login.css" rel='stylesheet' type='text/css' />
+    <!--web-fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!--/web-fonts-->
+</head>
+<body>
 
 <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
 <script type="text/javascript">window.__admin_utc_offset__ = "28800";</script>
@@ -13,33 +18,38 @@
 <meta name="robots" content="NONE,NOARCHIVE" />
 </head>
 
-<body class=" login">
+<body>
 <!-- Container -->
-<div id="container">
+<div class="m-login">
     <!-- Header -->
-    <div id="header">
-        <div id="branding">
-            <h1 id="site-name">舆情监控系统</h1>
-        </div>
-    </div>
+    <h1>舆情监控系统</h1>
     <!-- END Header -->
     <!-- Content -->
+    <div class="login-form">
+        <div class="form-content">
+            <form action="" method="post" id="login_form">
+            <div class="form-text">
+                {% csrf_token %}
+                <input type="text" class="text" id="u_name"
+                       placeholder="用户名" maxlength="254" name="u_name" value="">
+                <input type="password" value="" id="u_pwd" placeholder="密码" name="u_pwd">
+                <input type="submit" value="GO" id="login_btn" >
+            </div>
+            <div class="alert alert-danger" style="display: none" id="err_message"></div>
+            </form>
+        </div>
+    </div>
     <div id="content" class="colM">
         <div id="content-main">
             <form action="" method="post" id="login_form">
-                {% csrf_token %}
-              <div class="form-row">
-                <label class="required">用户名:</label> <input id="u_name" maxlength="254" name="u_name" type="text" />
-              </div>
-              <div class="form-row">
-                <label class="required">密&nbsp;&nbsp;&nbsp;码:</label> <input id="u_pwd" name="u_pwd" type="password" />
-              </div>
-              <div class="form-row" style="display: none" id="err_message">
-
-              </div>
-              <div class="submit-row">
-                <label>&nbsp;</label><input type="button" value="登录" onclick="login()"/>
-              </div>
+                <div class="form-text">
+                    <input type="text" class="text"
+                           id="u_name" placeholder="用户名"
+                           name="u_name" value="">
+                    <input type="u_pwd" value="" id="u_pwd" placeholder="密码" name="password">
+                    <input type="button" value="GO" id="login_btn" onclick="login()">
+                </div>
+                <div class="alert alert-danger" style="display: none;" id="err_message"></div>
             </form>
         </div>
         <br class="clear" />

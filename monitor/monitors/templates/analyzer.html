@@ -1,702 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>DT舆情监控系统-信息汇总</title>
-    <link rel="stylesheet" href="static/css/bootstrap.css">
-    <link rel="stylesheet" href="static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/css/AdminLTE.css">
-    <link rel="stylesheet" href="static/css/skins/skin-blue.min.css">
-    <link rel="stylesheet" href="static/css/common/page.style.css">
-    <link rel="stylesheet" href="static/css/daterangepicker.css">
-    <link rel="icon" href="static/images/favicon.ico" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-    {% include 'header.html' %}
-
-    <div class="content-wrapper">
-        <!-- Main content -->
-        <div class="box">
-            <div class="box-body">
-                <div class="page-filter-form-container">
-                    <form method="get" class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">舆情任务：</label>
-                            <div class="col-md-9">
-                                <select class="form-control" name="task" id="task_selected" onclick="change_task()">
-                                    {%for key,item in data.items%}
-                                        <option value="{{key}}" {{item.selected}}
-                                                mt_keys_value="{{item.mt_keys}}"
-                                                mt_sources_value="{{item.sources_keys_str}}"
-                                        >{{key}}</option>
-                                    {%endfor%}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">关键字：</label>
-                            <div class="col-md-9">
-                                {%for key,item in data.items%}
-                                    {% ifequal "selected" item.selected %}
-                                        <div class="form-control" id="task_keys">{{item.mt_keys}}</div>
-　　　　                            {% endifequal %}
-                                {%endfor%}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">数据源：</label>
-                            <div class="col-md-9">
-                                <select class="form-control" name="data_source" id="task_data_source">
-                                    {%for key,item in data.items%}
-                                        {% ifequal "selected" item.selected %}
-                                            {%for source_item in item.sources_keys%}
-                                                {% ifequal "11" source_item %}
-                                                    <option value="11">新浪微博搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "21" source_item %}
-                                                    <option value="21">携程问答搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "22" source_item %}
-                                                    <option value="22">携程游记搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "31" source_item %}
-                                                    <option value="31">马蜂窝问答搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "32" source_item %}
-                                                    <option value="32">马蜂窝游记搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "41" source_item %}
-                                                    <option value="41">穷游问答搜索</option>
-                                                {% endifequal %}
-                                                {% ifequal "42" source_item %}
-                                                    <option value="42">穷游帖子搜索</option>
-                                                {% endifequal %}
-                                            {%endfor%}
-    　　　　                            {% endifequal %}
-                                    {%endfor%}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">时间：</label>
-                            <div class="col-md-9">
-                                <button type="button" class="btn btn-default" id="datetime_range_key" data-start-date="{{data_start_date}}" data-end-date="{{data_end_date}}">
-                                    <input type="hidden" id="datetime_range" name="datetime_range" data-name="date">
-                                    <i class="fa fa-calendar"></i>
-                                    <span></span>
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-9 col-md-offset-3">
-                                <button type="button" class="btn btn-primary mr20" name="submit_button" onclick="gather_query('True')">搜索
-                                </button>
-                                <!--<a href="" class="btn btn-default mr20">重置</a>-->
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="mt20">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#info_gather" role="tab" data-toggle="tab"><i
-                            class="fa fa-list"></i>信息汇总</a></li>
-                        <li role="presentation"><a href="#info_analyzer" role="tab" data-toggle="tab"><i
-                            class="fa fa-user"></i>内容分析</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="info_gather"></div>
-            <div role="tabpanel" class="tab-pane" id="info_analyzer">
-                <div class="box box-info box-header with-border" style="margin-bottom: 10px">
-                    <h3 class="box-title">内容统计</h3>
-                </div>
-                <div class="chart-box white-content row">
-                    <div class="col-xs-6 border-right">
-                        <div class="chart-box-title">
-                            情感属性
-                        </div>
-                        <div class="chart-content" id="chart_content_emotion"></div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="chart-box-title">
-                            内容分析
-                        </div>
-                        <div class="chart-content" id="chart_content_analyzer"></div>
-                    </div>
-                </div>
-                <div id="top10"></div>
-            </div>
-
-        </div>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2018 <a href="#">Yuqing Data</a>.</strong> All rights reserved.
-    </footer>
-    <div class="control-sidebar-bg"></div>
-</div>
-<script src="static/js/jquery.min.js"></script>
-<script src="static/js/bootstrap.min.js"></script>
-<script src="static/js/adminlte.js"></script>
-<script src="static/js/moment.js"></script>
-<script src="static/js/echarts.min.js"></script>
-<script src="static/js/echarts-wordcloud.min.js"></script>
-<script src="static/js/daterangepicker.min.js"></script>
-<script src="static/js/common/analyzer.js"></script>
-<script type="text/javascript">
-    $(function () {
-        gather_query("True");
-        $(window).on('resize', function () {
-            reRenderCharts()
-        })
-        $("#target_info_gather").on('click', function () {
-            if (this.analyzerChart && this.emotionChart) {
-                reRenderCharts()
-            }
-        })
-    })
-
-    function change_task(){
-        var mt_keys_value = $("#task_selected  option:selected").attr("mt_keys_value");
-        var mt_sources_value = $("#task_selected  option:selected").attr("mt_sources_value");
-        $("#task_keys").text(mt_keys_value);
-
-        var mt_sources_list = mt_sources_value.split(",")
-        var sources_option_html = create_sources_option_html(mt_sources_list)
-        $("#task_data_source").html(sources_option_html);
-        console.log(mt_sources_value)
-    }
-
-    function create_sources_option_html(mt_sources_list){
-        var sources_option_html="";
-        for ( var i = 0; i <mt_sources_list.length; i++){
-            console.log(mt_sources_list[i]);
-            if("11"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="11">新浪微博搜索</option>';
-            }
-            if("21"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="21">携程问答搜索</option>';
-            }
-            if("22"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="22">携程游记搜索</option>';
-            }
-            if("31"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="31">马蜂窝问答搜索</option>';
-            }
-            if("32"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="32">马蜂窝游记搜索</option>';
-            }
-            if("41"==mt_sources_list[i]){
-                sources_option_html = sources_option_html + '<option value="41">穷游问答搜索</option>';
-            }
-            if("42"==mt_sources_list[i]) {
-                sources_option_html = sources_option_html + '<option value="22">穷游帖子搜索</option>';
-            }
-        }
-        return sources_option_html;
-    }
-
-    function gather_query(isSearch, obj){
-        page = $(obj).attr("value");
-        if(isSearch){
-            page = 1;
-        }
-        var data_range = $('#datetime_range').val();
-        var data_range_list = data_range.split("-");
-        var start_date = "";
-        var end_date = "";
-        if(data_range_list[0]){
-            start_date = data_range_list[0].trim();
-        }
-        if(data_range_list[1]){
-            end_date = data_range_list[1].trim();
-        }else{
-            end_date = data_range_list[0].trim();
-        }
-        var task_name = $("#task_selected  option:selected").attr("value");
-        var data_source = $("#task_data_source  option:selected").attr("value");
-        var params = { "task_name":task_name,"data_source": data_source, "start_date": start_date, "end_date": end_date,"page": page };
-        create_info_gather_detail_html(params);
-        if(isSearch){
-            create_top10_html(params)
-            get_analyzer_senti(params)
-        }
-    }
-
-    function create_info_gather_detail_html(params){
-        $.ajax({
-            type: 'get',
-            url: '/get_gather_detail',
-            data: params,
-            success: function (data) {
-                var data_json = JSON.parse(data)
-                if (data_json['success']) {
-                    var exportExecl_method = data_json['exportExecl_method']
-                    var page_tools = data_json['datas']['page_tools']
-                    var item_list = data_json['datas']['data_list']
-                    var html = '<div class="box box-info box-header with-border mt20" style="margin-bottom: 10px">\
-                                    <h3 class="box-title">详情数据（'+ page_tools ["all_counts"]+'条）</h3>\
-                                    <div class="box-tools pull-right">\
-                                        <a href="javascript:void(0)" onclick="'+ exportExecl_method +'" class="btn btn-primary"> <i class="fa fa-download"></i> 导出数据</a>\
-                                    </div>\
-                                </div>\
-                                <div class="items-list-block">';
-                    console.log(params['data_source'])
-                    var detail_html = create_detail_by_source(item_list, params['data_source']);
-                    html = html + detail_html + '</div>';
-                    var page_tools_html = create_pages_tool_html(page_tools);
-                    html = html + page_tools_html;
-                    $("#info_gather").html(html);
-                } else {
-                    alert(data)
-                }
-            }
-        });
-    }
-
-    function create_top10_html(params) {
-        $.ajax({
-            type: 'get',
-            url: '/get_top',
-            data: params,
-            success: function (data) {
-                var data_json = JSON.parse(data)
-                if (data_json['success']) {
-                    var exportTop10Execl_method = data_json['exportExecl_method']
-                    var item_list = data_json['datas']['data_list']
-                    var html = '<div class="box box-info box-header with-border mt20" style="margin-bottom: 10px">\
-                                    <h3 class="box-title">重要舆情TOP10</h3>\
-                                    <div class="box-tools pull-right">\
-                                        <a href="javascript:void(0)" onclick="' + exportTop10Execl_method + '" class="btn btn-primary"> <i class="fa fa-download"></i> 导出数据</a>\
-                                    </div>\
-                                </div>\
-                                <div class="items-list-block">';
-                    console.log(params['data_source'])
-                    var detail_html = create_detail_by_source(item_list, params['data_source']);
-                    html = html + detail_html + '</div>';
-                    $("#top10").html(html);
-                } else {
-                    alert(data)
-                }
-            }
-        });
-    }
-
-
-    function create_pages_tool_html(page_tools){
-        var tools_head_html = '<div class="row">\
-                                    <div class="col-sm-5">\
-                                        <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">\
-                                            共 '+ page_tools ["all_counts"]+' 条结果\
-                                        </div>\
-                                    </div>\
-                                    <div class="col-sm-7">\
-                                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">\
-                                            <ul class="pagination">\
-                                                <li class="';
-        var tools_previous_html = "";
-        if(page_tools['has_previous']){
-            tools_previous_html = tools_previous_html + '">\
-                                <a href="#" value="'+ page_tools['previous_page_number'] +'" onclick="gather_query(false,this);" aria-label="Previous">\
-                                <span aria-hidden="true">&laquo;</span>\
-                              </a>';
-        }else {
-            tools_previous_html = tools_previous_html + 'disabled">\
-                                <span aria-hidden="true">&laquo;</span>\
-                              </a>';
-        }
-        var tools_middle_html = '';
-        for ( var i = 0; i <page_tools['dis_range'].length; i++){
-            class_html = '';
-            if(page_tools['cur_page']==page_tools['dis_range'][i]){
-                class_html = 'active';
-            }
-            tools_middle_html = tools_middle_html +'<li class="'+ class_html + '" >\
-                                  <a href="#" value="'+ page_tools['dis_range'][i] +'"  onclick="gather_query(false,this);" >'+page_tools['dis_range'][i]+'</a>\
-                                </li>';
-        }
-        var tools_next_html = '<li class="';
-        if(page_tools['has_next']){
-            tools_next_html = tools_next_html + '">\
-                                <a href="#" value="'+ page_tools['next_page_num'] +'" onclick="gather_query(false,this);" aria-label="Next">\
-                                <span aria-hidden="true">&raquo;</span>\
-                              </a>\
-                              </li>\
-                        </ul>\
-                    </div>\
-                </div>\
-            </div>';
-        }else {
-            tools_next_html = tools_next_html + 'disabled">\
-                                <span aria-hidden="true">&raquo;</span>\
-                              </a>\
-                            </li>\
-                        </ul>\
-                    </div>\
-                </div>\
-            </div>';
-        }
-        var tool_html = tools_head_html+tools_previous_html+tools_middle_html+tools_next_html;
-        return tool_html;
-    }
-
-    function create_detail_by_source(item_list, data_source){
-        var detail_html = '';
-        if("11"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info">'+ item_list[i].content_text + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].create_user +'</span>\
-                                    <span class="mr20">转发数： '+ item_list[i].reposts_count +'</span>\
-                                    <span class="mr20">评论数： '+ item_list[i].comments_count +'</span>\
-                                    <span class="mr20">点赞数： '+ item_list[i].attitudes_count +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].created_at +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].weibo_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("21"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].ask_question + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\
-                                    <span class="mr20">收藏数： '+ item_list[i].ask_collects +'</span>\
-                                    <span class="mr20">分享数： '+ item_list[i].ask_shares +'</span>\
-                                    <span class="mr20">回答数： '+ item_list[i].ask_answers +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("22"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].note_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].note_content + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].note_user +'</span>\
-                                    <span class="mr20">评论数： '+ item_list[i].note_answers +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].note_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].note_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("31"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].ask_content + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\
-                                    <span class="mr20">有用数： '+ item_list[i].ask_used_counts +'</span>\
-                                    <span class="mr20">评论数： '+ item_list[i].ask_answer_counts +'</span>\
-                                    <span class="mr20">同问数： '+ item_list[i].ask_same_counts +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("32"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].book_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].book_content + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].book_user +'</span>\
-                                    <span class="mr20">浏览量： '+ item_list[i].book_scan_counts +'</span>\
-                                    <span class="mr20">评论数： '+ item_list[i].booker_answer_counts +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].book_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].book_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("41"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].ask_content + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\
-                                    <span class="mr20">回答数： '+ item_list[i].ask_answer_counts +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        if("42"==data_source){
-            for ( var i = 0; i <item_list.length; i++){
-                detail_html = detail_html +
-                    '<div class="item-ceil">\
-                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].bbs_title + '</div>\
-                        <div class="item-ceil-info">'+ item_list[i].bbs_content + '</div>\
-                        <div class="item-ceil-options">\
-                            <div class="row">\
-                                <div class="col-xs-9 row">\
-                                    <span class="mr20">作者： '+ item_list[i].bbs_user +'</span>\
-                                    <span class="mr20">浏览量： '+ item_list[i].bbs_scan_counts +'</span>\
-                                    <span class="mr20">评论数： '+ item_list[i].bbs_answer_counts +'</span>\
-                                    <span class="mr20">喜欢数： '+ item_list[i].bbs_like_counts +'</span>\
-                                    <span class="mr20">发表日期： '+ item_list[i].bbs_date +'</span>\
-                                </div>\
-                                <div class="col-xs-3">\
-                                    <a href="'+ item_list[i].bbs_url +'" target="_blank" class="pull-right">查看详情</a>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-            }
-        }
-        return detail_html;
-    }
-
-    function exportExecl(task_name, source_type, start_date_str, end_date_str) {
-        window.open("/exportExecl/" + task_name + "/" + source_type + "/" +start_date_str+ "/" + end_date_str);
-    }
-
-    function exportTop10Execl(task_name, source_type, start_date_str, end_date_str) {
-        window.open("/exportTop10Execl/" + task_name + "/" + source_type + "/" +start_date_str+ "/" + end_date_str);
-    }
-
-    function get_analyzer_senti(params){
-        $.ajax({
-            type: 'get',
-            url: '/get_analyzer_senti',
-            data: params,
-            success: function (data) {
-                var data_json = JSON.parse(data)
-                if (data_json['success']) {
-                    initChartWidth();
-                    initEmotionChart(data_json['datas']['senti_result'])
-                    initWordsCloudChart(data_json['datas']['word_cloud_result'])
-                } else {
-                    alert(data)
-                }
-            }
-        });
-    }
-
-    function initChartWidth() {
-        var wWidth = (window.innerWidth - 300)/2
-        $('#chart_content_emotion').css({'height': '400px', 'width': wWidth + 'px'})
-        $('#chart_content_analyzer').css({'height': '400px', 'width': wWidth + 'px'})
-    }
-
-    function reRenderCharts() {
-        if ($('#info_gather').is(':visible')) {
-            this.analyzerChart && this.analyzerChart.resize();
-            this.emotionChart && this.emotionChart.resize();
-        }
-    }
-
-    function initEmotionChart(datas) {
-        var legendData = ['正面', '负面', '中性'];
-        var seriesData = [
-            { name: '正面', value: datas['pos']},
-            { name: '负面', value: datas['neg']},
-            { name: '中性', value: datas['midd']}
-        ];
-        var emotionDom = $("#chart_content_emotion")[0]
-        const option = {
-            title: {
-                show: false
-            },
-            borderWidth: 2,
-            tooltip: {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            legend: {
-                orient: 'horizontal',
-                bottom: 20,
-                icon: 'roundRect',
-                x: 'center',
-                textStyle: {
-                    color: '#333'
-                },
-                data: legendData
-            },
-            series: [
-                {
-                    name: datas['title'],
-                    type: 'pie',
-                    radius: ['40%', '55%'],
-                    center: ['50%', '50%'],
-                    color: ['#0E7CE2', '#FF8352', '#E271DE', '#F8456B', '#00FFFF', '#4AEAB0'],
-                    data: seriesData,
-                    itemStyle: {
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
-                    },
-                    labelLine: {
-                        normal: {
-                            show: true,
-                            length: 20,
-                            lineStyle: {
-                                width: 2
-                            }
-                        }
-                    },
-                    label: {
-                        normal: {
-                            formatter: '{c|{c}}\n{hr|}\n{d|{d}%}',
-                            rich: {
-                                b: {
-                                    fontSize: 20,
-                                    align: 'left',
-                                    padding: 4
-                                },
-                                hr: {
-                                    borderColor: '#12EABE',
-                                    width: '100%',
-                                    borderWidth: 2,
-                                    height: 0
-                                },
-                                d: {
-                                    fontSize: 20,
-                                    align: 'left',
-                                    padding: 4
-                                },
-                                c: {
-                                    fontSize: 20,
-                                    align: 'left',
-                                    padding: 4
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        }
-        this.emotionChart = echarts.init(emotionDom)
-        this.emotionChart.setOption(option)
-    }
-
-    function initWordsCloudChart(word_datas) {
-//        var maskImage = new Image();
-//        var analyzerDom = $("#chart_content_analyzer")[0]
-        var values = []
-        for ( var i = 0; i <word_datas.length; i++){
-            if(i>=100){
-                break;
-            }
-            values.push(word_datas[i]);
-        }
-
-        var option = {
-            title: {
-                show: false
-            },
-            tooltip: {
-                show: true
-            },
-            series: [{
-                name: '',
-                type: 'wordCloud',
-                size: ['90%', '90%'],
-                textStyle: {
-                    normal: {
-                        color: function() {
-                            return 'rgb(' + [
-                                Math.round(Math.random() * 160),
-                                Math.round(Math.random() * 160),
-                                Math.round(Math.random() * 160)
-                            ].join(',') + ')';
-                        }
-                    },
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowColor: '#333'
-                    }
-                },
-                textRotation : [0, 45, 90, -45],
-                textPadding: 0,
-                autoSize: {
-                    enable: true,
-                    minSize: 14
-                },
-                data: values
-        }]}
-        var analyzerDom = $("#chart_content_analyzer")[0]
-
-        this.analyzerChart = echarts.init(analyzerDom)
-        this.analyzerChart.setOption(option)
-
-    }
-</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">    <title>DT舆情监控系统-信息汇总</title>    <link rel="stylesheet" href="static/css/bootstrap.css">    <link rel="stylesheet" href="static/css/font-awesome.min.css">    <link rel="stylesheet" href="static/css/ionicons.min.css">    <link rel="stylesheet" href="static/css/AdminLTE.css">    <link rel="stylesheet" href="static/css/skins/skin-blue.min.css">    <link rel="stylesheet" href="static/css/common/page.style.css">    <link rel="stylesheet" href="static/css/daterangepicker.css">    <link rel="icon" href="static/images/favicon.ico" />    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]--></head><body class="hold-transition skin-blue sidebar-mini"><div class="wrapper">    {% include 'header.html' %}    <div class="content-wrapper">        <!-- Main content -->        <div class="box">            <div class="box-body">                <div class="page-filter-form-container">                    <form method="get" class="form-horizontal">                        <div class="form-group">                            <label class="col-md-3 control-label">舆情任务：</label>                            <div class="col-md-9">                                <select class="form-control" name="task" id="task_selected" onclick="change_task()">                                    {%for key,item in data.items%}                                        <option value="{{key}}" {{item.selected}}                                                mt_keys_value="{{item.mt_keys}}"                                                mt_sources_value="{{item.sources_keys_str}}"                                        >{{key}}</option>                                    {%endfor%}                                </select>                            </div>                        </div>                        <div class="form-group">                            <label class="col-md-3 control-label">关键字：</label>                            <div class="col-md-9">                            {%for key,item in data.items%}                                {% ifequal "selected" item.selected %}                                <input type="text" name="key" id="task_keys" readonly                                       class="form-control" value="{{item.mt_keys}}">　　　　                         {% endifequal %}                            {%endfor%}                            </div>                        </div>                        <div class="form-group">                            <label class="col-md-3 control-label">数据源：</label>                            <div class="col-md-9">                                <select class="form-control" name="data_source" id="task_data_source">                                    {%for key,item in data.items%}                                        {% ifequal "selected" item.selected %}                                            {%for source_item in item.sources_keys%}                                                {% ifequal "11" source_item %}                                                    <option value="11">新浪微博搜索</option>                                                {% endifequal %}                                                {% ifequal "21" source_item %}                                                    <option value="21">携程问答搜索</option>                                                {% endifequal %}                                                {% ifequal "22" source_item %}                                                    <option value="22">携程游记搜索</option>                                                {% endifequal %}                                                {% ifequal "31" source_item %}                                                    <option value="31">马蜂窝问答搜索</option>                                                {% endifequal %}                                                {% ifequal "32" source_item %}                                                    <option value="32">马蜂窝游记搜索</option>                                                {% endifequal %}                                                {% ifequal "41" source_item %}                                                    <option value="41">穷游问答搜索</option>                                                {% endifequal %}                                                {% ifequal "42" source_item %}                                                    <option value="42">穷游帖子搜索</option>                                                {% endifequal %}                                            {%endfor%}    　　　　                            {% endifequal %}                                    {%endfor%}                                </select>                            </div>                        </div>                        <div class="form-group">                            <label class="col-md-3 control-label">时间：</label>                            <div class="col-md-9">                                <button type="button" class="btn btn-default" id="datetime_range_key" data-start-date="{{data_start_date}}" data-end-date="{{data_end_date}}">                                    <input type="hidden" id="datetime_range" name="datetime_range" data-name="date">                                    <i class="fa fa-calendar"></i>                                    <span></span>                                    <i class="fa fa-caret-down"></i>                                </button>                            </div>                        </div>                        <div class="form-group">                            <div class="col-md-9 col-md-offset-3">                                <button type="button" class="btn btn-primary mr20" name="submit_button" onclick="gather_query('True')">搜索                                </button>                                <!--<a href="" class="btn btn-default mr20">重置</a>-->                            </div>                        </div>                    </form>                </div>            </div>        </div>        <div class="mt20">            <!-- Nav tabs -->            <ul class="nav nav-tabs" role="tablist">                <li role="presentation" class="active">                    <a href="#info_gather" role="tab" data-toggle="tab">                        <i class="fa fa-list margin-r-5"></i>                        信息汇总                    </a>                </li>                <li role="presentation">                    <a href="#info_analyzer" role="tab" data-toggle="tab">                        <i class="fa fa-pie-chart margin-r-5"></i>                        内容分析                    </a>                </li>            </ul>        </div>        <div class="tab-content">            <div role="tabpanel" class="tab-pane active" id="info_gather"></div>            <div role="tabpanel" class="tab-pane" id="info_analyzer">                <div class="box box-info box-header with-border" style="margin-bottom: 10px">                    <h3 class="box-title">内容统计</h3>                </div>                <div class="chart-box white-content row">                    <div class="col-xs-6 border-right">                        <div class="chart-box-title">                            情感属性                        </div>                        <div class="chart-content" style="width: 100%; height: 400px;" id="chart_content_emotion"></div>                    </div>                    <div class="col-xs-6">                        <div class="chart-box-title">                            内容分析                        </div>                        <div class="chart-content" style="width: 100%; height: 400px;" id="chart_content_analyzer"></div>                    </div>                </div>                <div id="top10"></div>            </div>        </div>        <!-- /.content -->    </div>    <!-- /.content-wrapper -->    <!-- Main Footer -->    <footer class="main-footer">        <strong>Copyright &copy; 2018 <a href="#">Yuqing Data</a>.</strong> All rights reserved.    </footer>    <div class="control-sidebar-bg"></div></div><script src="static/js/jquery.min.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/adminlte.js"></script><script src="static/js/moment.js"></script><script src="static/js/echarts.min.js"></script><script src="static/js/echarts-wordcloud.min.js"></script><script src="static/js/daterangepicker.min.js"></script><script src="static/js/common/analyzer.js"></script><script type="text/javascript">    $(function () {        gather_query("True");        $(window).on('resize', function () {            reRenderCharts()        })        $("#target_info_gather").on('click', function () {            if (this.analyzerChart && this.emotionChart) {                reRenderCharts()            }        })    })    function change_task(){        var mt_keys_value = $("#task_selected  option:selected").attr("mt_keys_value");        var mt_sources_value = $("#task_selected  option:selected").attr("mt_sources_value");        $("#task_keys").text(mt_keys_value);        var mt_sources_list = mt_sources_value.split(",")        var sources_option_html = create_sources_option_html(mt_sources_list)        $("#task_data_source").html(sources_option_html);        console.log(mt_sources_value)    }    function create_sources_option_html(mt_sources_list){        var sources_option_html="";        for ( var i = 0; i <mt_sources_list.length; i++){            console.log(mt_sources_list[i]);            if("11"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="11">新浪微博搜索</option>';            }            if("21"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="21">携程问答搜索</option>';            }            if("22"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="22">携程游记搜索</option>';            }            if("31"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="31">马蜂窝问答搜索</option>';            }            if("32"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="32">马蜂窝游记搜索</option>';            }            if("41"==mt_sources_list[i]){                sources_option_html = sources_option_html + '<option value="41">穷游问答搜索</option>';            }            if("42"==mt_sources_list[i]) {                sources_option_html = sources_option_html + '<option value="22">穷游帖子搜索</option>';            }        }        return sources_option_html;    }    function gather_query(isSearch, obj){        page = $(obj).attr("value");        if(isSearch){            page = 1;        }        var data_range = $('#datetime_range').val();        var data_range_list = data_range.split("-");        var start_date = "";        var end_date = "";        if(data_range_list[0]){            start_date = data_range_list[0].trim();        }        if(data_range_list[1]){            end_date = data_range_list[1].trim();        }else{            end_date = data_range_list[0].trim();        }        var task_name = $("#task_selected  option:selected").attr("value");        var data_source = $("#task_data_source  option:selected").attr("value");        var params = { "task_name":task_name,"data_source": data_source, "start_date": start_date, "end_date": end_date,"page": page };        create_info_gather_detail_html(params);        if(isSearch){            create_top10_html(params)            get_analyzer_senti(params)        }    }    function create_info_gather_detail_html(params){        $.ajax({            type: 'get',            url: '/get_gather_detail',            data: params,            success: function (data) {                var data_json = JSON.parse(data)                if (data_json['success']) {                    var exportExecl_method = data_json['exportExecl_method']                    var page_tools = data_json['datas']['page_tools']                    var item_list = data_json['datas']['data_list']                    var html = '<div class="box box-info box-header with-border mt20" style="margin-bottom: 10px">\                                    <h3 class="box-title">详情数据（'+ page_tools ["all_counts"]+'条）</h3>\                                    <div class="box-tools pull-right">\                                        <a href="javascript:void(0)" onclick="'+ exportExecl_method +'" class="btn btn-primary"> <i class="fa fa-download"></i> 导出数据</a>\                                    </div>\                                </div>\                                <div class="items-list-block">';                    console.log(params['data_source'])                    var detail_html = create_detail_by_source(item_list, params['data_source']);                    html = html + detail_html + '</div>';                    var page_tools_html = create_pages_tool_html(page_tools);                    html = html + page_tools_html;                    $("#info_gather").html(html);                } else {                    alert(data)                }            }        });    }    function create_top10_html(params) {        $.ajax({            type: 'get',            url: '/get_top',            data: params,            success: function (data) {                var data_json = JSON.parse(data)                if (data_json['success']) {                    var exportTop10Execl_method = data_json['exportExecl_method']                    var item_list = data_json['datas']['data_list']                    var html = '<div class="box box-info box-header with-border mt20" style="margin-bottom: 10px">\                                    <h3 class="box-title">重要舆情TOP10</h3>\                                    <div class="box-tools pull-right">\                                        <a href="javascript:void(0)" onclick="' + exportTop10Execl_method + '" class="btn btn-primary"> <i class="fa fa-download"></i> 导出数据</a>\                                    </div>\                                </div>\                                <div class="items-list-block">';                    console.log(params['data_source'])                    var detail_html = create_detail_by_source(item_list, params['data_source']);                    html = html + detail_html + '</div>';                    $("#top10").html(html);                } else {                    alert(data)                }            }        });    }    function create_pages_tool_html(page_tools){        var tools_head_html = '<div class="row">\                                    <div class="col-sm-5">\                                        <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">\                                            共 '+ page_tools ["all_counts"]+' 条结果\                                        </div>\                                    </div>\                                    <div class="col-sm-7">\                                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">\                                            <ul class="pagination">\                                                <li class="';        var tools_previous_html = "";        if(page_tools['has_previous']){            tools_previous_html = tools_previous_html + '">\                                <a href="#" value="'+ page_tools['previous_page_number'] +'" onclick="gather_query(false,this);" aria-label="Previous">\                                <span aria-hidden="true">&laquo;</span>\                              </a>';        }else {            tools_previous_html = tools_previous_html + 'disabled">\                                <span aria-hidden="true">&laquo;</span>\                              </a>';        }        var tools_middle_html = '';        for ( var i = 0; i <page_tools['dis_range'].length; i++){            class_html = '';            if(page_tools['cur_page']==page_tools['dis_range'][i]){                class_html = 'active';            }            tools_middle_html = tools_middle_html +'<li class="'+ class_html + '" >\                                  <a href="#" value="'+ page_tools['dis_range'][i] +'"  onclick="gather_query(false,this);" >'+page_tools['dis_range'][i]+'</a>\                                </li>';        }        var tools_next_html = '<li class="';        if(page_tools['has_next']){            tools_next_html = tools_next_html + '">\                                <a href="#" value="'+ page_tools['next_page_num'] +'" onclick="gather_query(false,this);" aria-label="Next">\                                <span aria-hidden="true">&raquo;</span>\                              </a>\                              </li>\                        </ul>\                    </div>\                </div>\            </div>';        }else {            tools_next_html = tools_next_html + 'disabled">\                                <span aria-hidden="true">&raquo;</span>\                              </a>\                            </li>\                        </ul>\                    </div>\                </div>\            </div>';        }        var tool_html = tools_head_html+tools_previous_html+tools_middle_html+tools_next_html;        return tool_html;    }    function create_detail_by_source(item_list, data_source){        var detail_html = '';        if("11"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info">'+ item_list[i].content_text + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].create_user +'</span>\                                    <span class="mr20">转发数： '+ item_list[i].reposts_count +'</span>\                                    <span class="mr20">评论数： '+ item_list[i].comments_count +'</span>\                                    <span class="mr20">点赞数： '+ item_list[i].attitudes_count +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].created_at +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].weibo_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("21"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].ask_question + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\                                    <span class="mr20">收藏数： '+ item_list[i].ask_collects +'</span>\                                    <span class="mr20">分享数： '+ item_list[i].ask_shares +'</span>\                                    <span class="mr20">回答数： '+ item_list[i].ask_answers +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("22"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].note_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].note_content + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].note_user +'</span>\                                    <span class="mr20">评论数： '+ item_list[i].note_answers +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].note_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].note_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("31"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].ask_content + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\                                    <span class="mr20">有用数： '+ item_list[i].ask_used_counts +'</span>\                                    <span class="mr20">评论数： '+ item_list[i].ask_answer_counts +'</span>\                                    <span class="mr20">同问数： '+ item_list[i].ask_same_counts +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("32"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].book_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].book_content + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].book_user +'</span>\                                    <span class="mr20">浏览量： '+ item_list[i].book_scan_counts +'</span>\                                    <span class="mr20">评论数： '+ item_list[i].booker_answer_counts +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].book_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].book_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("41"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].ask_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].ask_content + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].ask_user +'</span>\                                    <span class="mr20">回答数： '+ item_list[i].ask_answer_counts +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].ask_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].ask_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        if("42"==data_source){            for ( var i = 0; i <item_list.length; i++){                detail_html = detail_html +                    '<div class="item-ceil">\                        <div class="item-ceil-info" style="color: #00acd6">'+ item_list[i].bbs_title + '</div>\                        <div class="item-ceil-info">'+ item_list[i].bbs_content + '</div>\                        <div class="item-ceil-options">\                            <div class="row">\                                <div class="col-xs-9">\                                    <span class="mr20">作者： '+ item_list[i].bbs_user +'</span>\                                    <span class="mr20">浏览量： '+ item_list[i].bbs_scan_counts +'</span>\                                    <span class="mr20">评论数： '+ item_list[i].bbs_answer_counts +'</span>\                                    <span class="mr20">喜欢数： '+ item_list[i].bbs_like_counts +'</span>\                                    <span class="mr20">发表日期： '+ item_list[i].bbs_date +'</span>\                                </div>\                                <div class="col-xs-3">\                                    <a href="'+ item_list[i].bbs_url +'" target="_blank" class="pull-right">查看详情</a>\                                </div>\                            </div>\                        </div>\                    </div>';            }        }        return detail_html;    }    function exportExecl(task_name, source_type, start_date_str, end_date_str) {        window.open("/exportExecl/" + task_name + "/" + source_type + "/" +start_date_str+ "/" + end_date_str);    }    function exportTop10Execl(task_name, source_type, start_date_str, end_date_str) {        window.open("/exportTop10Execl/" + task_name + "/" + source_type + "/" +start_date_str+ "/" + end_date_str);    }    function get_analyzer_senti(params){        $.ajax({            type: 'get',            url: '/get_analyzer_senti',            data: params,            success: function (data) {                var data_json = JSON.parse(data)                if (data_json['success']) {                    initChartWidth();                    initEmotionChart(data_json['datas']['senti_result'])                    initWordsCloudChart(data_json['datas']['word_cloud_result'])                } else {                    alert(data)                }            }        });    }    function initChartWidth() {        var wWidth = (window.innerWidth - 300)/2        $('#chart_content_emotion').css({'height': '400px', 'width': wWidth + 'px'})        $('#chart_content_analyzer').css({'height': '400px', 'width': wWidth + 'px'})    }    function reRenderCharts() {        if ($('#info_gather').is(':visible')) {            // 弹性布局，修复echart 显示盒子的宽度            var analyzerChart = $("#chart_content_analyzer")            var emotionChart = $("#chart_content_emotion")            analyzerChart.width(analyzerChart.parent().width())            emotionChart.width(emotionChart.parent().width())            this.analyzerChart && this.analyzerChart.resize();            this.emotionChart && this.emotionChart.resize();        }    }    function initEmotionChart(datas) {        var legendData = ['正面', '负面', '中性'];        var seriesData = [            { name: '正面', value: datas['pos']},            { name: '负面', value: datas['neg']},            { name: '中性', value: datas['midd']}        ];        var emotionDom = $("#chart_content_emotion")[0]        const option = {            title: {                show: false            },            borderWidth: 2,            tooltip: {                trigger: 'item',                formatter: '{a} <br/>{b} : {c} ({d}%)'            },            legend: {                orient: 'horizontal',                bottom: 20,                icon: 'roundRect',                x: 'center',                textStyle: {                    color: '#333'                },                data: legendData            },            series: [                {                    name: datas['title'],                    type: 'pie',                    radius: ['40%', '55%'],                    center: ['50%', '50%'],                    color: ['#0E7CE2', '#FF8352', '#E271DE', '#F8456B', '#00FFFF', '#4AEAB0'],                    data: seriesData,                    itemStyle: {                        emphasis: {                            shadowBlur: 10,                            shadowOffsetX: 0,                            shadowColor: 'rgba(0, 0, 0, 0.5)'                        }                    },                    labelLine: {                        normal: {                            show: true,                            length: 20,                            lineStyle: {                                width: 2                            }                        }                    },                    label: {                        normal: {                            formatter: '{c|{c}}\n{hr|}\n{d|{d}%}',                            rich: {                                b: {                                    fontSize: 20,                                    align: 'left',                                    padding: 4                                },                                hr: {                                    borderColor: '#12EABE',                                    width: '100%',                                    borderWidth: 2,                                    height: 0                                },                                d: {                                    fontSize: 20,                                    align: 'left',                                    padding: 4                                },                                c: {                                    fontSize: 20,                                    align: 'left',                                    padding: 4                                }                            }                        }                    }                }            ]        }        this.emotionChart = echarts.init(emotionDom)        this.emotionChart.setOption(option)    }    function initWordsCloudChart(word_datas) {//        var maskImage = new Image();//        var analyzerDom = $("#chart_content_analyzer")[0]        var values = []        for ( var i = 0; i <word_datas.length; i++){            if(i>=100){                break;            }            values.push(word_datas[i]);        }        var option = {            title: {                show: false            },            tooltip: {                show: true            },            series: [{                name: '',                type: 'wordCloud',                size: ['90%', '90%'],                textStyle: {                    normal: {                        color: function() {                            return 'rgb(' + [                                Math.round(Math.random() * 160),                                Math.round(Math.random() * 160),                                Math.round(Math.random() * 160)                            ].join(',') + ')';                        }                    },                    emphasis: {                        shadowBlur: 10,                        shadowColor: '#333'                    }                },                textRotation : [0, 45, 90, -45],                textPadding: 0,                autoSize: {                    enable: true,                    minSize: 14                },                data: values        }]}        var analyzerDom = $("#chart_content_analyzer")[0]        this.analyzerChart = echarts.init(analyzerDom)        this.analyzerChart.setOption(option)    }</script></body></html>

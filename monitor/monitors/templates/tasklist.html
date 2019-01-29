@@ -32,14 +32,21 @@
                         </div>
                         <div class="dropdown col-md-4">
                             <form action="" method="GET">
-                                <input type="text" id="task_search" name="serachKey" value="{{searchKey}}"
-                                        placeholder="任务名称">
-                                <a class="btn btn-default" href="#" onclick="task_query(true,1);"> 搜索</a>
+                                <div class="input-group">
+                                    <input type="text" class="form-control"
+                                           name="serachKey"
+                                           id="task_search"
+                                           value="{{searchKey}}"
+                                           placeholder="任务名称">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" href="#" onclick="task_query(true,1);"> 搜索</button>
+                                    </span>
+                                </div>
                                 <!--<button class="btn btn-default" onclick="javascrtpt:task_query();"> 搜索</button>-->
                             </form>
                         </div>
                         <div class="col-xs-2">
-                            <a href="./editTask" class="btn btn-default btn-primary" role="button">新增</a>
+                            <a href="./editTask" class="btn btn-primary pull-right" role="button">新增</a>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -100,9 +107,9 @@
                                                         </td>
                                                         <td>
                                                             <a class="btn btn-default btn-sm" href="./editTask?mt_name={{item.mt_name}}">编辑</a>
-                                                            <a class="btn btn-default btn-sm" task_name="{{item.mt_name}}" href="#" onclick="del_task(this);">删除</a>
                                                             <a class="btn btn-default btn-sm" task_name="{{item.mt_name}}" href="#" onclick="start_task(this);">启动</a>
                                                             <a class="btn btn-default btn-sm" href="/analyzer?task_name={{item.mt_name}}">舆情分析</a>
+                                                            <a class="btn btn-default btn-sm" task_name="{{item.mt_name}}" href="#" onclick="del_task(this);">删除</a>
                                                         </td>
                                                     </tr>
                                               {%endfor%}
